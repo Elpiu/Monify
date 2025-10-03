@@ -2,44 +2,27 @@ import {
   ApplicationConfig,
   isDevMode,
   provideBrowserGlobalErrorListeners,
-  Provider,
-  provideZoneChangeDetection
+  provideZoneChangeDetection,
+  provideZonelessChangeDetection,
 } from '@angular/core';
-import {provideRouter} from '@angular/router';
-import {routes} from './app.routes';
-import {provideServiceWorker} from '@angular/service-worker';
-import {provideIcons, provideNgIconsConfig} from '@ng-icons/core';
-import * as tablerIcons from '@ng-icons/tabler-icons';
-import {TablerIconPrefixPipe} from './utils/pipe/tabler-icon-prefix-pipe';
-
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
+import { provideServiceWorker } from '@angular/service-worker';
+import { provideAllFromMain } from './modules/main/main.config';
+import { provideUiKitConfig } from './modules/ui-kit/config/ui-kit.config';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideZoneChangeDetection({eventCoalescing: true}),
+    provideZonelessChangeDetection(),
 
+    ...provideUiKitConfig(),
+    ...provideAllFromMain(),
 
-    ...provideIconsFromTabler(),
-    ...provideUtilsPipe(),
-
-    provideRouter(routes), provideServiceWorker('ngsw-worker.js', {
+    provideRouter(routes),
+    provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),
-      registrationStrategy: 'registerWhenStable:30000'
-    })
-  ]
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
+  ],
 };
-
-
-function provideIconsFromTabler(): Provider[] {
-  return [
-    provideIcons({...tablerIcons}),
-    provideNgIconsConfig({size: '1.5rem'}),
-  ]
-}
-
-
-function provideUtilsPipe(): any {
-  return [
-    TablerIconPrefixPipe
-  ]
-}
