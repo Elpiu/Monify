@@ -10,6 +10,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
 import { Ripple } from 'primeng/ripple';
 import { MenubarModule } from 'primeng/menubar';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,8 @@ import { MenubarModule } from 'primeng/menubar';
     Ripple,
     MenubarModule,
     CommonModule,
+    TranslatePipe,
+    TranslateDirective,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
