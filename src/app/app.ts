@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { Ripple } from 'primeng/ripple';
 import { MenubarModule } from 'primeng/menubar';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { NoteMeCalendar } from './modules/calendar-me/note-me-calendar/note-me-calendar';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,9 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
     MenubarModule,
     CommonModule,
     TranslatePipe,
+    NoteMeCalendar,
     TranslateDirective,
+    NoteMeCalendar,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

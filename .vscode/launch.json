@@ -15,6 +15,15 @@
       "request": "launch",
       "preLaunchTask": "npm: test",
       "url": "http://localhost:9876/debug.html"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Brave against localhost",
+      "url": "http://localhost:4200",
+      "runtimeExecutable": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+      "runtimeArgs": ["--remote-debugging-port=9222"],
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }

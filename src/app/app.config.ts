@@ -2,7 +2,6 @@ import {
   ApplicationConfig,
   isDevMode,
   provideBrowserGlobalErrorListeners,
-  provideZoneChangeDetection,
   provideZonelessChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
@@ -11,12 +10,13 @@ import { provideServiceWorker } from '@angular/service-worker';
 import { provideAllFromMain } from './modules/main/main.config';
 import { provideUiKitConfig } from './modules/ui-kit/config/ui-kit.config';
 import { provideHttpClient } from '@angular/common/http';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-
+    provideAnimations(),
     provideHttpClient(),
 
     ...provideUiKitConfig(),

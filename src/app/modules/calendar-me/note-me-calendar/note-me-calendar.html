@@ -1,0 +1,74 @@
+<div class="p-10" #mainContainer>
+  <p-datepicker
+    class="w-full"
+    [inline]="true"
+    [(ngModel)]="calendarValue"
+    (onSelect)="handleSelect($event)"
+  >
+    <ng-template #date let-date>
+      @if (getEmojiForDate(date); as emoji) {
+      <span class="text-xl">
+        {{ emoji }}
+      </span>
+      } @else {
+      <span>
+        {{ date.day }}
+      </span>
+      }
+    </ng-template>
+  </p-datepicker>
+
+  <ng-container [ngTemplateOutlet]="modal" />
+</div>
+
+<ng-template #modal>
+  <p-dialog
+    [(visible)]="isModalVisible"
+    [modal]="true"
+    [style]="{ width: '25rem' }"
+    [draggable]="false"
+    (onHide)="selectedMood.set(null)"
+  >
+    <ng-template pTemplate="header">
+      <div class="inline-flex items-center justify-center gap-2">
+        <h3 class="m-0">{{ calendarValue() | date : 'mediumDate' }}</h3>
+      </div>
+    </ng-template>
+
+    <div class="flex justify-around items-center py-4">
+      @for(mood of moodList; track $index ){
+      <div class="cursor-pointer p-2 rounded-full transition-all duration-200 ease-in-out">
+        <p-button
+          [severity]="selectedMood()?.name === mood.name ? 'success' : 'secondary'"
+          (onClick)="selectMood(mood)"
+          [rounded]="true"
+          severity="success"
+          [outlined]="true"
+          ><span class="text-2xl">{{ mood.emoji }}</span></p-button
+        >
+      </div>
+      }
+    </div>
+
+    <p-floatlabel variant="on">
+      <input class="w-full" pInputText id="on_label" [(ngModel)]="noteText" autocomplete="off" />
+      <label for="on_label">{{ 'note-me-calendar.note' | translate }}</label>
+    </p-floatlabel>
+
+    <ng-template pTemplate="footer">
+      <p-button
+        label="{{ 'common.cancel' | translate }}"
+        [text]="true"
+        severity="secondary"
+        (click)="isModalVisible.set(false); calendarValue.set(null)"
+      />
+      <p-button
+        label="{{ 'note-me-calendar.save' | translate }}"
+        [text]="true"
+        severity="success"
+        (click)="handleSave()"
+        [disabled]="selectedMood() === null"
+      />
+    </ng-template>
+  </p-dialog>
+</ng-template>
