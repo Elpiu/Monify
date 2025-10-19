@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1760890836635,
+  "timestamp": 1760891339002,
   "index": "/monify/index.html",
   "assetGroups": [
     {
@@ -50,7 +50,7 @@
     "/monify/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/monify/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/monify/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/monify/index.html": "6894d02119804d609307c4198acc688d1e73fdfa",
+    "/monify/index.html": "8092a113b0b8c8442e1de535e66e5e947a3b3708",
     "/monify/main-C6ICG2DO.js": "98735900d5fec0ab924d8d84cc4b3d5a938360cc",
     "/monify/manifest.webmanifest": "c3879cf627055cc0d70f24f69d4a86e484412043",
     "/monify/styles-TXKE54AW.css": "e9cbe6751b3c4eb8c88027bfb4dfbaceae5755fd"
