@@ -1,0 +1,77 @@
+{
+  "configVersion": 1,
+  "timestamp": 1760890652829,
+  "index": "/monify/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/monify/favicon.ico",
+        "/monify/index.html",
+        "/monify/main-C6ICG2DO.js",
+        "/monify/manifest.webmanifest",
+        "/monify/styles-TXKE54AW.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/monify/icons/icon-128x128.png",
+        "/monify/icons/icon-144x144.png",
+        "/monify/icons/icon-152x152.png",
+        "/monify/icons/icon-192x192.png",
+        "/monify/icons/icon-384x384.png",
+        "/monify/icons/icon-512x512.png",
+        "/monify/icons/icon-72x72.png",
+        "/monify/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/monify/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/monify/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/monify/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/monify/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/monify/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/monify/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/monify/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/monify/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/monify/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/monify/index.html": "6894d02119804d609307c4198acc688d1e73fdfa",
+    "/monify/main-C6ICG2DO.js": "98735900d5fec0ab924d8d84cc4b3d5a938360cc",
+    "/monify/manifest.webmanifest": "c3879cf627055cc0d70f24f69d4a86e484412043",
+    "/monify/styles-TXKE54AW.css": "e9cbe6751b3c4eb8c88027bfb4dfbaceae5755fd"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
