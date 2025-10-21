@@ -4,21 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "15c9c42f5f4358d0",
+        "id": "ca922142202f981e",
         "type": "tabs",
         "children": [
           {
-            "id": "df9f50d0b65c2735",
+            "id": "fb91aed716879f6f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "Task's/Fase 0/[High] Installazione PWA.md",
-                "mode": "source",
-                "source": false
+                "file": "Kanban Board.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false,
+                    true,
+                    true
+                  ]
+                }
               },
-              "icon": "lucide-file",
-              "title": "[High] Installazione PWA"
+              "icon": "lucide-trello",
+              "title": "Kanban Board"
             }
           }
         ]
@@ -169,8 +176,9 @@
       "obsidian-kanban:Crea nuova bacheca": false
     }
   },
-  "active": "df9f50d0b65c2735",
+  "active": "fb91aed716879f6f",
   "lastOpenFiles": [
+    "Task's/Fase 0/Cose da rivedere o rivedere.md",
     "Kanban Board.md",
     "Task's/Fase 0/[High] Installazione PWA.md",
     "0 Intro/Descrizione del Progetto Monify 📅.md",

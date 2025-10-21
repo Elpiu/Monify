@@ -1,4 +1,1 @@
 L'applicazione deve essere configurata come PWA completa, permettendo l'installazione su desktop e mobile e garantendo un'esperienza offline funzionale. Questo include un manifest.json e un service-worker.js ben configurati per il caching delle risorse.
-
-
-problemi con installazione del service-worker

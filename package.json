@@ -7,7 +7,7 @@
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy --base-href=/monify/"
+    "deploy": "ng deploy --base-href=/Monify/"
   },
   "prettier": {
     "printWidth": 100,

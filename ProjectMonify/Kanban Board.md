@@ -13,11 +13,11 @@ kanban-plugin: board
 - [ ] [[[High] Visualizzazione Calendario Mensile]]
 - [ ] [[[High] Inserimento Modifica Eliminazione Umore e Nota]]
 - [ ] [[[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata)]]
+- [ ] [[Cose da rivedere o rivedere]]
 
 
 ## Doing
 
-- [ ] [[[High] Installazione PWA]]
 
 
 ## Review
@@ -26,6 +26,7 @@ kanban-plugin: board
 
 ## Done
 
+- [ ] [[[High] Installazione PWA]]
 
 
 

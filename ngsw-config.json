@@ -13,7 +13,12 @@
           "/index.html",
           "/manifest.webmanifest",
           "/*.css",
-          "/*.js"
+          "/*.js",
+
+          "/ngsw-worker.js",
+          "/worker-basic.min.js",
+          "/safety-worker.js",
+          "ngsw.json"
         ]
       }
     },
