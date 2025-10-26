@@ -21,5 +21,11 @@
   "share": {
     "title": "Check out Monify!",
     "message-app": "Hey, I discovered this fantastic PWA for tracking moods and events. You should try it!"
+  },
+  "pwa": {
+    "install_title": "Install Monify App",
+    "install_message": "Get the full experience! Install Monify on your device for quick access and offline use.",
+    "install_button": "Install",
+    "install_later": "Later"
   }
 }

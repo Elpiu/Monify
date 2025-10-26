@@ -9,6 +9,7 @@ kanban-plugin: board
 - [ ] [[Cose da rivedere o rivedere]]
 - [ ] [[[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata)]]
 - [ ] Aggiungere suggest feature (spin off nuova applicazione ?)
+- [ ] Add when a mobile navigate to the page pwa and dosn't have installed a popup show and guide the user to install the pwa
 
 
 ## Doing

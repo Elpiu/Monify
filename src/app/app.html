@@ -8,3 +8,35 @@
 
   <app-footer />
 </div>
+
+<p-toast key="install-pwa" position="bottom-center">
+  <ng-template #headless let-message pTemplate="message">
+    <div class="flex items-center gap-4 p-4 bg-surface-overlay rounded-lg shadow-lg">
+      <span class="text-2xl pi pi-download text-primary"></span>
+
+      <div class="flex-1">
+        <h3 class="font-bold text-base text-surface-900 dark:text-surface-0">
+          {{ message.summary }}
+        </h3>
+        <p class="text-sm text-surface-700 dark:text-surface-200 mt-1">{{ message.detail }}</p>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <button
+          type="button"
+          pButton
+          [label]="'pwa.install_button' | translate"
+          (click)="onInstallPwa()"
+          class="p-button-sm"
+        ></button>
+        <button
+          type="button"
+          pButton
+          [label]="'pwa.install_later' | translate"
+          (click)="onRejectInstallPwa()"
+          class="p-button-sm p-button-text p-button-secondary"
+        ></button>
+      </div>
+    </div>
+  </ng-template>
+</p-toast>

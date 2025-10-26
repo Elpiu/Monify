@@ -46,6 +46,8 @@ export class NoteMeCalendar {
   allMoodData = this.calendarStorage.allMoodData;
   allMoodDataAsMap = computed<Map<string, MoodItemDO>>(() => {
     const map = new Map<string, MoodItemDO>();
+    if (!this.allMoodData()) return map;
+
     this.allMoodData().forEach((moodData) => {
       map.set(moodData.date, moodData);
     });
