@@ -16,6 +16,7 @@ import { Topbar } from './modules/ui-kit/layout/topbar/topbar';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
+import { Footer } from './modules/ui-kit/layout/footer/footer';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,7 @@ import { ConfirmPopupModule } from 'primeng/confirmpopup';
     NoteMeCalendar,
     ToastModule,
     Topbar,
+    Footer,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

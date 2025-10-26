@@ -4,21 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "93b489c132b1316f",
+        "id": "bb5860182c2fd375",
         "type": "tabs",
         "children": [
           {
-            "id": "e14bbd2f83a2c01b",
+            "id": "324b402332b3b332",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "Task's/Fase 0/[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata).md",
-                "mode": "source",
-                "source": false
+                "file": "Kanban Board.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false,
+                    true,
+                    true
+                  ]
+                }
               },
-              "icon": "lucide-file",
-              "title": "[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata)"
+              "icon": "lucide-trello",
+              "title": "Kanban Board"
             }
           }
         ]
@@ -169,22 +176,24 @@
       "obsidian-kanban:Crea nuova bacheca": false
     }
   },
-  "active": "e14bbd2f83a2c01b",
+  "active": "324b402332b3b332",
   "lastOpenFiles": [
+    "Task's/Fase 0/[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata).md",
     "Kanban Board.md",
+    "Task's/Fase 0/Cose da rivedere o rivedere.md",
+    "0 Intro/System prompt.md",
+    "0 Intro/Descrizione del Progetto Monify 📅.md",
+    "Footer adding version.md",
     "Task's/Fase 0/[High] Visualizzazione Calendario Mensile.md",
     "Task's/Fase 0/[Medium] Esportazione Dati (CSV).md",
     "Task's/Fase 0/[High] Cancellazione di tutti i dati.md",
-    "Task's/Fase 0/Cose da rivedere o rivedere.md",
     "Task's/Fase 0/[High] Navbar Essenziale.md",
     "Task's/Fase 0/[High] Inserimento Modifica Eliminazione Umore e Nota.md",
     "Task's/Fase 0/[High] Gestione Dati Offline (IndexedDB con Dexie.js).md",
     "Task's/Fase 0/[High] Installazione PWA.md",
-    "0 Intro/Descrizione del Progetto Monify 📅.md",
     "Task's/Fase 0",
     "Task's",
     "Fase 1 Task's",
-    "Task's/Fase 0/[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata).md",
     "0 Intro",
     "Kanban Roadmap/Iniziare a definire la roadmap.md",
     "Untitled.md",

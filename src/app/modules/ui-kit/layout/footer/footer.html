@@ -1,0 +1,40 @@
+<footer class="px-4 py-3 bg-surface-ground border-t border-surface-border">
+  <div class="container mx-auto flex items-center justify-between text-sm">
+    <div class="text-surface-500 dark:text-surface-400">
+      <span>&copy; {{ currentYear }} Monify</span>
+      <span class="ml-2">v{{ version }}</span>
+    </div>
+
+    <div class="flex items-center gap-3">
+      @if (canShare) {
+      <button
+        type="button"
+        (click)="shareApp()"
+        class="flex items-center justify-center w-8 h-8 rounded-md border border-primary text-surface-600 dark:text-surface-300 hover:bg-primary-200 hover:text-surface-card transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-ground"
+      >
+        <ng-icon name="tablerShare3" size="1.25rem"></ng-icon>
+      </button>
+      }
+
+      <a
+        href="https://github.com/elpiu/Monify"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Codice Sorgente su GitHub"
+        class="flex items-center justify-center w-8 h-8 rounded-md border border-primary text-surface-600 dark:text-surface-300 hover:bg-primary-200 hover:text-surface-card transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-ground"
+      >
+        <ng-icon name="tablerBrandGithub" size="1.25rem"></ng-icon>
+      </a>
+
+      <a
+        href="https://github.com/elpiu"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Profilo GitHub personale"
+        class="flex items-center justify-center w-8 h-8 rounded-md border border-primary text-surface-600 dark:text-surface-300 hover:bg-primary-200 hover:text-surface-card transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-ground"
+      >
+        <ng-icon name="tablerUser" size="1.25rem"></ng-icon>
+      </a>
+    </div>
+  </div>
+</footer>

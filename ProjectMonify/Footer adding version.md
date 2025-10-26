@@ -1,0 +1,3 @@
+- footer dell'applicazione
+- mostra la versione corrente di monify sulla sinistra 
+- a destra estrema mostra una lista di element, codice sorgente con icona github, profilo personale mio

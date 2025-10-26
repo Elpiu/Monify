@@ -1,4 +1,4 @@
-export type Mood = 'happy' | 'sad' | 'stressed' | 'neutral' | 'angry';
+export type Mood = 'super-happy' | 'happy' | 'normal' | 'stressed-sad' | 'angry';
 
 export interface MoodItem {
   name: Mood;
@@ -7,11 +7,11 @@ export interface MoodItem {
 }
 
 export const moodList: MoodItem[] = [
-  { name: 'happy', emoji: '😊', class: 'bg-green-300' },
-  { name: 'neutral', emoji: '😐', class: 'bg-yellow-300' },
-  { name: 'sad', emoji: '😞', class: 'bg-blue-300' },
-  { name: 'stressed', emoji: '😟', class: 'bg-orange-300' },
-  { name: 'angry', emoji: '😠', class: 'bg-red-300' },
+  { name: 'super-happy', emoji: '🤩', class: 'bg-green-200' },
+  { name: 'happy', emoji: '😊', class: 'bg-green-400' },
+  { name: 'normal', emoji: '😐', class: 'bg-yellow-300' },
+  { name: 'stressed-sad', emoji: '😟', class: 'bg-orange-300' },
+  { name: 'angry', emoji: '😡', class: 'bg-red-400' },
 ];
 
 const moodEmojiMap: Record<Mood, string> = moodList.reduce((acc, item) => {

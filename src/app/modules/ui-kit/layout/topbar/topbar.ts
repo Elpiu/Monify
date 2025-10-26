@@ -3,7 +3,6 @@ import { Component, computed, inject, output } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { NgIcon } from '@ng-icons/core';
-import { MenubarModule } from 'primeng/menubar';
 import { ConfirmationService, MenuItem, MessageService } from 'primeng/api';
 import { Menu } from 'primeng/menu';
 import { TranslateService } from '@ngx-translate/core';

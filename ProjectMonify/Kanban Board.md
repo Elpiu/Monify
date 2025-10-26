@@ -7,11 +7,13 @@ kanban-plugin: board
 ## Backlog
 
 - [ ] [[Cose da rivedere o rivedere]]
+- [ ] [[[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata)]]
+- [ ] Aggiungere suggest feature (spin off nuova applicazione ?)
 
 
 ## Doing
 
-- [ ] [[[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata)]]
+- [ ] [[Footer adding version]]
 
 
 ## Review
