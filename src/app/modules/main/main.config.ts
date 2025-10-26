@@ -17,7 +17,7 @@ export function provideAllFromMain(): Provider[] {
   return [
     provideTranslateService({
       loader: provideTranslateHttpLoader({
-        prefix: '/i18n/',
+        prefix: 'data/i18n/',
         suffix: '.json',
       }),
       fallbackLang: 'en',
