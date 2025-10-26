@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1761497288843,
+  "timestamp": 1761497712824,
   "index": "/Monify/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/Monify/favicon.ico",
         "/Monify/index.html",
-        "/Monify/main-ZR26TTKZ.js",
+        "/Monify/main-I3FWZVG2.js",
         "/Monify/manifest.webmanifest",
         "/Monify/styles-ATLT3JQW.css"
       ],
@@ -52,8 +52,8 @@
     "/Monify/icons/icon-72x72.png": "9ca77cf8cf775c3ec364c81b2229bb3f939570a3",
     "/Monify/icons/icon-96x96.png": "4f31ac1e74db73bca1cde07175cdfb1e297fb0c8",
     "/Monify/icons/icon.svg": "70a7114fb1e54055e595dee7a25a11ee78b5f443",
-    "/Monify/index.html": "c123c18404c2de47b91a2721f4959e1f9214749c",
-    "/Monify/main-ZR26TTKZ.js": "c5e9bc5f991b0768d9ca1f1b72bc9953b5ead55c",
+    "/Monify/index.html": "e0b7982c840e32dcaa5b95841f31d9d03ae476e5",
+    "/Monify/main-I3FWZVG2.js": "cafb3ae2b379065e92f8bd9ad985b77fac29959f",
     "/Monify/manifest.webmanifest": "c3879cf627055cc0d70f24f69d4a86e484412043",
     "/Monify/styles-ATLT3JQW.css": "246c3fb3e899a09fc15e292e76116ce03bab0012"
   },
