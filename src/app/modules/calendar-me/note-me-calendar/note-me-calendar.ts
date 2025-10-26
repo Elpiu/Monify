@@ -9,10 +9,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabel } from 'primeng/floatlabel';
 import { FormsModule } from '@angular/forms';
-import {
-  fromCalendarDateNgPrimeToYYYYYMMDDString,
-  fromDateToYYYYMMDDString,
-} from '../utils/date.utils';
+import { fromCalendarDateNgPrimeToYYYYYMMDDString } from '../utils/date.utils';
 
 @Component({
   selector: 'app-note-me-calendar',
@@ -21,7 +18,6 @@ import {
     DialogModule,
     TranslatePipe,
     Button,
-    NgTemplateOutlet,
     DatePipe,
     InputTextModule,
     FloatLabel,
@@ -36,44 +32,87 @@ export class NoteMeCalendar {
   private calendarStorage = inject(CalendarStorage);
   private datePipe = inject(DatePipe);
 
-  isModalVisible = signal<boolean>(false);
-
+  // State Signals
+  isModalVisible = signal(false);
   calendarValue = signal<Date | null>(null);
-  noteText = signal<string>('');
+  noteText = signal('');
+  selectedMood = signal<MoodItem | null>(null);
+  editingMood = signal<MoodItemDO | null>(null);
 
-  moodList = moodList;
+  // Constants
+  readonly moodList = moodList;
+
+  // Data from Storage
   allMoodData = this.calendarStorage.allMoodData;
   allMoodDataAsMap = computed<Map<string, MoodItemDO>>(() => {
-    if (!this.allMoodData()) return new Map();
-    console.log('allMoodData', this.allMoodData());
     const map = new Map<string, MoodItemDO>();
     this.allMoodData().forEach((moodData) => {
       map.set(moodData.date, moodData);
     });
-    console.log('map', map);
     return map;
   });
 
-  selectedMood = signal<MoodItem | null>(null);
+  handleSelect(date: Date): void {
+    const dateString = this.datePipe.transform(date, 'yyyy-MM-dd')!;
+    const existingData = this.allMoodDataAsMap().get(dateString);
 
-  handleSave() {
-    this.isModalVisible.set(false);
-    this.calendarStorage.addMoodData({
-      date: this.datePipe.transform(this.calendarValue(), 'yyyy-MM-dd')!,
-      mood: this.selectedMood()!.name,
-      note: this.noteText(),
-    });
-  }
+    this.calendarValue.set(date);
 
-  handleSelect(event: any) {
-    event = this.datePipe.transform(event, 'yyyy-MM-dd');
+    if (existingData) {
+      // Modalità Modifica: popoliamo i dati esistenti
+      this.editingMood.set(existingData);
+      this.noteText.set(existingData.note);
+      const currentMood = this.moodList.find((m) => m.name === existingData.mood);
+      this.selectedMood.set(currentMood ?? null);
+    } else {
+      // Modalità Creazione: resettiamo lo stato
+      this.editingMood.set(null);
+      this.noteText.set('');
+      this.selectedMood.set(null);
+    }
 
-    this.noteText.set('');
     this.isModalVisible.set(true);
   }
 
-  selectMood(mood: MoodItem) {
+  async handleSave(): Promise<void> {
+    if (!this.selectedMood() || !this.calendarValue()) return;
+
+    const moodDataPayload = {
+      date: this.datePipe.transform(this.calendarValue(), 'yyyy-MM-dd')!,
+      mood: this.selectedMood()!.name,
+      note: this.noteText(),
+    };
+
+    const currentEditingMood = this.editingMood();
+    if (currentEditingMood?.id) {
+      // Siamo in modalità UPDATE
+      await this.calendarStorage.updateMoodData(currentEditingMood.id, moodDataPayload);
+    } else {
+      // Siamo in modalità CREATE
+      await this.calendarStorage.addMoodData(moodDataPayload);
+    }
+
+    this.closeAndResetModal();
+  }
+
+  async handleDelete(): Promise<void> {
+    const currentEditingMood = this.editingMood();
+    if (currentEditingMood?.id) {
+      await this.calendarStorage.deleteMoodData(currentEditingMood.id);
+      this.closeAndResetModal();
+    }
+  }
+
+  selectMood(mood: MoodItem): void {
     this.selectedMood.set(mood);
+  }
+
+  closeAndResetModal(): void {
+    this.isModalVisible.set(false);
+    this.editingMood.set(null);
+    this.selectedMood.set(null);
+    this.noteText.set('');
+    this.calendarValue.set(null);
   }
 
   getEmojiForDate(date: any): string | null {

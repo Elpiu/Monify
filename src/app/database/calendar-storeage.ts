@@ -32,7 +32,7 @@ export class CalendarStorage extends Dexie {
   ) as Signal<MoodItemDO[]>;
 
   public addMoodData(data: Omit<MoodItemDO, 'id'>) {
-    console.info('Added in moodData table new entry', data);
+    console.debug('Added in moodData table new entry', data);
     this.moodData.add(data);
   }
 
@@ -41,5 +41,36 @@ export class CalendarStorage extends Dexie {
     const start = `${year}-01-01`;
     const end = `${year}-12-31`;
     return { start, end };
+  }
+
+  public async updateMoodData(id: number, data: Partial<Omit<MoodItemDO, 'id'>>): Promise<void> {
+    try {
+      await this.moodData.update(id, data);
+      console.debug(`Updated record with id ${id}`, data);
+    } catch (error) {
+      console.error(`Error updating record with id ${id}:`, error);
+    }
+  }
+
+  public async deleteMoodData(id: number): Promise<void> {
+    try {
+      await this.moodData.delete(id);
+      console.info(`Deleted record with id ${id}`);
+    } catch (error) {
+      console.error(`Error deleting record with id ${id}:`, error);
+    }
+  }
+
+  public getAllMoodDataForExport(): Promise<MoodItemDO[]> {
+    return this.moodData.toArray();
+  }
+
+  public async clearAllMoodData(): Promise<void> {
+    try {
+      await this.moodData.clear();
+      console.info('All data has been deleted.');
+    } catch (error) {
+      console.error('Error deleting all data:', error);
+    }
   }
 }

@@ -1,0 +1,46 @@
+<nav
+  class="fixed top-0 left-0 right-0 z-50 h-16 px-4 bg-surface-card border-b border-surface-border shadow-md transition-colors duration-200"
+>
+  <div class="container mx-auto h-full flex items-center justify-between">
+    <!-- Logo e Nome App -->
+    <a
+      [routerLink]="['/']"
+      class="flex items-center gap-2 text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-md"
+      aria-label="Homepage di Monify"
+    >
+      <span>
+        <img src="icons/icon.svg" class="w-10 h-10" />
+      </span>
+      <!-- Puoi sostituire questo span con un vero SVG logo in futuro -->
+      <span class="pi pi-chart-line text-2xl"></span>
+      <span class="text-2xl font-bold">Monify</span>
+    </a>
+
+    <!-- Icona Impostazioni -->
+    <div>
+      <p-button
+        icon="pi pi-cog"
+        [rounded]="true"
+        [text]="true"
+        severity="secondary"
+        (click)="menu.toggle($event)"
+      >
+        <ng-icon name="tablerSettings"></ng-icon>
+      </p-button>
+      <p-confirmpopup />
+      <p-menu #menu [model]="items()" [popup]="true">
+        <ng-template #item let-item>
+          <a
+            pRipple
+            class="flex items-center p-menu-item-link"
+            (click)="handleMenuItemClick($event, item, menu)"
+            [attr.aria-label]="item.label"
+          >
+            <span><ng-icon name="{{ item.icon }}"></ng-icon></span>
+            <span class="ml-2">{{ item.label }}</span>
+          </a>
+        </ng-template>
+      </p-menu>
+    </div>
+  </div>
+</nav>

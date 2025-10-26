@@ -1,74 +1,90 @@
-<div class="p-10" #mainContainer>
+<div class="p-4 md:p-10" #mainContainer>
   <p-datepicker
     class="w-full"
     [inline]="true"
-    [(ngModel)]="calendarValue"
+    [ngModel]="calendarValue()"
     (onSelect)="handleSelect($event)"
   >
-    <ng-template #date let-date>
+    <ng-template pTemplate="date" let-date>
+      <!-- La logica per visualizzare l'emoji rimane invariata e funziona perfettamente -->
       @if (getEmojiForDate(date); as emoji) {
-      <span class="text-xl">
-        {{ emoji }}
-      </span>
+      <span class="text-xl">{{ emoji }}</span>
       } @else {
-      <span>
-        {{ date.day }}
-      </span>
+      <span>{{ date.day }}</span>
       }
     </ng-template>
   </p-datepicker>
-
-  <ng-container [ngTemplateOutlet]="modal" />
 </div>
 
-<ng-template #modal>
-  <p-dialog
-    [(visible)]="isModalVisible"
-    [modal]="true"
-    [style]="{ width: '25rem' }"
-    [draggable]="false"
-    (onHide)="selectedMood.set(null)"
-  >
-    <ng-template pTemplate="header">
-      <div class="inline-flex items-center justify-center gap-2">
-        <h3 class="m-0">{{ calendarValue() | date : 'mediumDate' }}</h3>
-      </div>
-    </ng-template>
-
-    <div class="flex justify-around items-center py-4">
-      @for(mood of moodList; track $index ){
-      <div class="cursor-pointer p-2 rounded-full transition-all duration-200 ease-in-out">
-        <p-button
-          [severity]="selectedMood()?.name === mood.name ? 'success' : 'secondary'"
-          (onClick)="selectMood(mood)"
-          [rounded]="true"
-          severity="success"
-          [outlined]="true"
-          ><span class="text-2xl">{{ mood.emoji }}</span></p-button
-        >
-      </div>
-      }
+<!-- Il modale ora gestisce sia la creazione che la modifica -->
+<p-dialog
+  [(visible)]="isModalVisible"
+  [modal]="true"
+  [style]="{ width: '25rem' }"
+  [draggable]="false"
+  (onHide)="closeAndResetModal()"
+>
+  <ng-template pTemplate="header">
+    <div class="inline-flex items-center justify-center gap-2">
+      <!-- Titolo dinamico in base alla modalità -->
+      <h3 class="m-0">
+        {{ (editingMood() ? 'note-me-calendar.edit' : 'note-me-calendar.add') | translate }} -
+        {{ calendarValue() | date : 'mediumDate' }}
+      </h3>
     </div>
+  </ng-template>
 
-    <p-floatlabel variant="on">
-      <input class="w-full" pInputText id="on_label" [(ngModel)]="noteText" autocomplete="off" />
-      <label for="on_label">{{ 'note-me-calendar.note' | translate }}</label>
+  <!-- La selezione del mood rimane invariata -->
+  <div class="flex justify-around items-center py-4">
+    @for(mood of moodList; track mood.name){
+    <div class="cursor-pointer">
+      <p-button
+        [severity]="selectedMood()?.name === mood.name ? 'success' : 'secondary'"
+        (onClick)="selectMood(mood)"
+        [rounded]="true"
+        [outlined]="selectedMood()?.name !== mood.name"
+      >
+        <span class="text-2xl">{{ mood.emoji }}</span>
+      </p-button>
+    </div>
+    }
+  </div>
+
+  <!-- Il campo note rimane invariato -->
+  <div class="mt-5">
+    <p-floatlabel>
+      <input class="w-full" pInputText id="note" [(ngModel)]="noteText" autocomplete="off" />
+      <label for="note">{{ 'note-me-calendar.note' | translate }}</label>
     </p-floatlabel>
+  </div>
 
-    <ng-template pTemplate="footer">
-      <p-button
-        label="{{ 'common.cancel' | translate }}"
-        [text]="true"
-        severity="secondary"
-        (click)="isModalVisible.set(false); calendarValue.set(null)"
-      />
-      <p-button
-        label="{{ 'note-me-calendar.save' | translate }}"
-        [text]="true"
-        severity="success"
-        (click)="handleSave()"
-        [disabled]="selectedMood() === null"
-      />
-    </ng-template>
-  </p-dialog>
-</ng-template>
+  <ng-template pTemplate="footer">
+    <!-- NUOVO: Pulsante Elimina, visibile solo in modalità modifica -->
+    @if(editingMood()){
+    <p-button
+      label="{{ 'common.delete' | translate }}"
+      (click)="handleDelete()"
+      icon="pi pi-trash"
+      severity="danger"
+      [text]="true"
+    />
+    }
+
+    <!-- Spaziatore per allineare i pulsanti a destra -->
+    <div class="flex-grow"></div>
+
+    <p-button
+      label="{{ 'common.cancel' | translate }}"
+      (click)="closeAndResetModal()"
+      severity="secondary"
+      [text]="true"
+    />
+    <p-button
+      label="{{ 'common.save' | translate }}"
+      (click)="handleSave()"
+      severity="success"
+      [disabled]="!selectedMood()"
+      icon="pi pi-check"
+    />
+  </ng-template>
+</p-dialog>

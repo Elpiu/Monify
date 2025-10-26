@@ -4,28 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ca922142202f981e",
+        "id": "93b489c132b1316f",
         "type": "tabs",
         "children": [
           {
-            "id": "fb91aed716879f6f",
+            "id": "e14bbd2f83a2c01b",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Kanban Board.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    true,
-                    true
-                  ]
-                }
+                "file": "Task's/Fase 0/[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata).md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "Kanban Board"
+              "icon": "lucide-file",
+              "title": "[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata)"
             }
           }
         ]
@@ -176,22 +169,22 @@
       "obsidian-kanban:Crea nuova bacheca": false
     }
   },
-  "active": "fb91aed716879f6f",
+  "active": "e14bbd2f83a2c01b",
   "lastOpenFiles": [
-    "Task's/Fase 0/Cose da rivedere o rivedere.md",
     "Kanban Board.md",
+    "Task's/Fase 0/[High] Visualizzazione Calendario Mensile.md",
+    "Task's/Fase 0/[Medium] Esportazione Dati (CSV).md",
+    "Task's/Fase 0/[High] Cancellazione di tutti i dati.md",
+    "Task's/Fase 0/Cose da rivedere o rivedere.md",
+    "Task's/Fase 0/[High] Navbar Essenziale.md",
+    "Task's/Fase 0/[High] Inserimento Modifica Eliminazione Umore e Nota.md",
+    "Task's/Fase 0/[High] Gestione Dati Offline (IndexedDB con Dexie.js).md",
     "Task's/Fase 0/[High] Installazione PWA.md",
     "0 Intro/Descrizione del Progetto Monify 📅.md",
-    "Task's/Fase 0/[High] Cancellazione di tutti i dati.md",
     "Task's/Fase 0",
     "Task's",
     "Fase 1 Task's",
     "Task's/Fase 0/[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata).md",
-    "Task's/Fase 0/[High] Inserimento Modifica Eliminazione Umore e Nota.md",
-    "Task's/Fase 0/[High] Visualizzazione Calendario Mensile.md",
-    "Task's/Fase 0/[High] Navbar Essenziale.md",
-    "Task's/Fase 0/[Medium] Esportazione Dati (CSV).md",
-    "Task's/Fase 0/[High] Gestione Dati Offline (IndexedDB con Dexie.js).md",
     "0 Intro",
     "Kanban Roadmap/Iniziare a definire la roadmap.md",
     "Untitled.md",

@@ -12,27 +12,30 @@ import { Ripple } from 'primeng/ripple';
 import { MenubarModule } from 'primeng/menubar';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 import { NoteMeCalendar } from './modules/calendar-me/note-me-calendar/note-me-calendar';
+import { Topbar } from './modules/ui-kit/layout/topbar/topbar';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
+import { ConfirmPopupModule } from 'primeng/confirmpopup';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    NgIcon,
-    TablerIconPrefixPipe,
     ButtonModule,
     BadgeModule,
     AvatarModule,
     InputTextModule,
-    Ripple,
     MenubarModule,
     CommonModule,
-    TranslatePipe,
     NoteMeCalendar,
-    TranslateDirective,
+    Topbar,
     NoteMeCalendar,
+    ToastModule,
+    Topbar,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
+  providers: [MessageService],
 })
 export class App implements OnInit {
   dbManager = inject(DatabaseManager);
