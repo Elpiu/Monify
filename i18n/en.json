@@ -1,3 +1,21 @@
 {
-  "hello": "aaaaaa"
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "settings": "Settings",
+    "exportData": "Export data CSV",
+    "wipeData": "Wipe all data",
+    "operation-success": "Operation complete",
+    "are-you-sure": "Are you sure?",
+    "yes-delete": "Yes, delete"
+  },
+  "note-me-calendar": {
+    "edit": "Editing",
+    "add": "Create",
+    "note": "Here you can add note...",
+    "noDataToExport": "No data to export.",
+    "operation-wipeData": "All data has been deleted.",
+    "confirmMessageWipeData": "This action is irreversible. All calendar data will be permanently deleted."
+  }
 }

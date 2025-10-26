@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1761080654260,
+  "timestamp": 1761497121576,
   "index": "/Monify/index.html",
   "assetGroups": [
     {
@@ -13,9 +13,9 @@
       "urls": [
         "/Monify/favicon.ico",
         "/Monify/index.html",
-        "/Monify/main-M62INE3U.js",
+        "/Monify/main-ZR26TTKZ.js",
         "/Monify/manifest.webmanifest",
-        "/Monify/styles-TXKE54AW.css"
+        "/Monify/styles-ATLT3JQW.css"
       ],
       "patterns": []
     },
@@ -52,10 +52,10 @@
     "/Monify/icons/icon-72x72.png": "9ca77cf8cf775c3ec364c81b2229bb3f939570a3",
     "/Monify/icons/icon-96x96.png": "4f31ac1e74db73bca1cde07175cdfb1e297fb0c8",
     "/Monify/icons/icon.svg": "70a7114fb1e54055e595dee7a25a11ee78b5f443",
-    "/Monify/index.html": "9759d1a75aa112dcaec2d15ab55fea8e3d11ee9d",
-    "/Monify/main-M62INE3U.js": "2bd26b8068bc15e863edf4f3c39bdd648a537fff",
+    "/Monify/index.html": "c123c18404c2de47b91a2721f4959e1f9214749c",
+    "/Monify/main-ZR26TTKZ.js": "c5e9bc5f991b0768d9ca1f1b72bc9953b5ead55c",
     "/Monify/manifest.webmanifest": "c3879cf627055cc0d70f24f69d4a86e484412043",
-    "/Monify/styles-TXKE54AW.css": "e9cbe6751b3c4eb8c88027bfb4dfbaceae5755fd"
+    "/Monify/styles-ATLT3JQW.css": "246c3fb3e899a09fc15e292e76116ce03bab0012"
   },
   "navigationUrls": [
     {
