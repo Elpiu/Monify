@@ -8,12 +8,10 @@ kanban-plugin: board
 
 - [ ] [[Cose da rivedere o rivedere]]
 - [ ] [[[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata)]]
-- [ ] [[Aggiungere suggest feature (spin off nuova applicazione )]]
 
 
 ## Doing
 
-- [ ] [[Footer adding version]]
 
 
 ## Review
@@ -22,6 +20,8 @@ kanban-plugin: board
 
 ## Done
 
+- [ ] [[Aggiungere suggest feature (spin off nuova applicazione )]]
+- [ ] [[Footer adding version]]
 - [ ] Add when a mobile navigate to the page pwa and dosn't have installed a popup show and guide the user to install the pwa
 - [ ] [[[High] Visualizzazione Calendario Mensile]]
 - [ ] [[[High] Cancellazione di tutti i dati]]

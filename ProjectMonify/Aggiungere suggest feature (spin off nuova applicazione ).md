@@ -1,4 +1,7 @@
 
+Parziale, solo vista non upvote e downvote
+
+
 trovata soluzione più efficace e semplice google form
 
 manca upvote e downvote
