@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1761506978109,
+  "timestamp": 1762012458534,
   "index": "/Monify/index.html",
   "assetGroups": [
     {
@@ -11,11 +11,17 @@
         "ignoreVary": true
       },
       "urls": [
+        "/Monify/chunk-2LG35MJS.js",
+        "/Monify/chunk-AEXDCC3L.js",
+        "/Monify/chunk-GLY62MQZ.js",
+        "/Monify/chunk-KYCXQUX2.js",
+        "/Monify/chunk-VBWFNTM6.js",
+        "/Monify/chunk-WG6NOY6S.js",
         "/Monify/favicon.ico",
         "/Monify/index.html",
-        "/Monify/main-5QVWAWZQ.js",
+        "/Monify/main-HV5JREB6.js",
         "/Monify/manifest.webmanifest",
-        "/Monify/styles-NZ5SQ6JD.css"
+        "/Monify/styles-3XTBQK55.css"
       ],
       "patterns": []
     },
@@ -27,6 +33,7 @@
         "ignoreVary": true
       },
       "urls": [
+        "/Monify/icons/bg_image.png",
         "/Monify/icons/icon-128x128.png",
         "/Monify/icons/icon-144x144.png",
         "/Monify/icons/icon-152x152.png",
@@ -42,7 +49,14 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/Monify/chunk-2LG35MJS.js": "3fae4a5f10c2352e05232c3adafd1a1ce32785f1",
+    "/Monify/chunk-AEXDCC3L.js": "79a57c4f47c563458aa194b00e47b63efb809bb8",
+    "/Monify/chunk-GLY62MQZ.js": "cb0a8336f5d08a2bff48231dddac83e84ab7b630",
+    "/Monify/chunk-KYCXQUX2.js": "3e8614226df170bf074ea25cdba7ab1973350826",
+    "/Monify/chunk-VBWFNTM6.js": "a672b54d3c2eae123d1423516d7ebd68d9dd2c03",
+    "/Monify/chunk-WG6NOY6S.js": "e7aea8f0433ddfd05d32db2177a731c822584b37",
     "/Monify/favicon.ico": "08e52b0e329deda80aca8db15141d78df64b6eac",
+    "/Monify/icons/bg_image.png": "2a2462ba308bedfa95337187a5807616f6975314",
     "/Monify/icons/icon-128x128.png": "d0501d5a4d4ed8a39ee6510bcf7ac9645cb1d238",
     "/Monify/icons/icon-144x144.png": "e7fe6812e8d899f271ffbf58a32d0d65bcd20d23",
     "/Monify/icons/icon-152x152.png": "ab8bec548a6dbb363568340a328708c8d629aadb",
@@ -52,10 +66,10 @@
     "/Monify/icons/icon-72x72.png": "9ca77cf8cf775c3ec364c81b2229bb3f939570a3",
     "/Monify/icons/icon-96x96.png": "4f31ac1e74db73bca1cde07175cdfb1e297fb0c8",
     "/Monify/icons/icon.svg": "70a7114fb1e54055e595dee7a25a11ee78b5f443",
-    "/Monify/index.html": "3bccd69a74b897844852accd7f0534951c251383",
-    "/Monify/main-5QVWAWZQ.js": "37ff35901f57bc965cee57c7dfba8b605c1a8474",
+    "/Monify/index.html": "311e746a264740f0cd1cbaf335d1ac9ea844130f",
+    "/Monify/main-HV5JREB6.js": "45ccd38e105dadd357f7cd1af14e10f4b5819f5f",
     "/Monify/manifest.webmanifest": "c3879cf627055cc0d70f24f69d4a86e484412043",
-    "/Monify/styles-NZ5SQ6JD.css": "9cd187c7eb126676bd12c443606c6169ed1c8e25"
+    "/Monify/styles-3XTBQK55.css": "5c2bad0e2252106049324439f20dd8a47c01fe3b"
   },
   "navigationUrls": [
     {
