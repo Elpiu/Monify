@@ -29,6 +29,26 @@
             }
           }
         ]
+      },
+      {
+        "id": "fa44de54a9030ea4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4381934244f46549",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Aggiungere suggest feature (spin off nuova applicazione ).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Aggiungere suggest feature (spin off nuova applicazione )"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -85,7 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200.5
   },
   "right": {
     "id": "ff76b23775ab3a1b",
@@ -176,10 +196,12 @@
       "obsidian-kanban:Crea nuova bacheca": false
     }
   },
-  "active": "324b402332b3b332",
+  "active": "4381934244f46549",
   "lastOpenFiles": [
-    "Task's/Fase 0/[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata).md",
     "Kanban Board.md",
+    "Aggiungere suggest feature (spin off nuova applicazione ).md",
+    "TODOS.md",
+    "Task's/Fase 0/[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata).md",
     "Task's/Fase 0/Cose da rivedere o rivedere.md",
     "0 Intro/System prompt.md",
     "0 Intro/Descrizione del Progetto Monify 📅.md",

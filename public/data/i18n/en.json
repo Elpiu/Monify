@@ -1,4 +1,8 @@
 {
+  "breadcrumb": {
+    "home": "Home",
+    "suggestions": "Suggestions"
+  },
   "common": {
     "save": "Save",
     "cancel": "Cancel",
@@ -27,5 +31,12 @@
     "install_message": "Get the full experience! Install Monify on your device for quick access and offline use.",
     "install_button": "Install",
     "install_later": "Later"
+  },
+  "feature-suggestion": {
+    "title": "Help Us Improve Monify!",
+    "description": "Have an idea for a new feature or an improvement? Share it with us!",
+    "list_title": "Community Suggestions",
+    "error-loading": "Could not load suggestions. Please try again later.",
+    "empty-suggestions": "No suggestions yet. Be the first!"
   }
 }

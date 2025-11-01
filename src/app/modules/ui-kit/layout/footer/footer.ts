@@ -3,10 +3,11 @@ import packageInfo from '../../../../../../package.json';
 import { NgIconComponent } from '@ng-icons/core';
 import { firstValueFrom } from 'rxjs';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
-  imports: [NgIconComponent, TranslatePipe],
+  imports: [NgIconComponent, RouterLink],
   templateUrl: './footer.html',
   styleUrl: './footer.css',
 })

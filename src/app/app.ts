@@ -13,11 +13,13 @@ import { MenubarModule } from 'primeng/menubar';
 import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { NoteMeCalendar } from './modules/calendar-me/note-me-calendar/note-me-calendar';
 import { Topbar } from './modules/ui-kit/layout/topbar/topbar';
-import { ConfirmationService, MessageService } from 'primeng/api';
+import { ConfirmationService, MenuItem, MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { Footer } from './modules/ui-kit/layout/footer/footer';
 import { PwaInstallService } from './modules/pwa/pwa-install-service';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { Breadcrump } from './modules/ui-kit/layout/breadcrump/breadcrump';
 
 @Component({
   selector: 'app-root',
@@ -29,13 +31,13 @@ import { PwaInstallService } from './modules/pwa/pwa-install-service';
     InputTextModule,
     MenubarModule,
     CommonModule,
-    NoteMeCalendar,
     Topbar,
-    NoteMeCalendar,
+    BreadcrumbModule,
     ToastModule,
     Topbar,
     Footer,
     TranslatePipe,
+    Breadcrump,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
@@ -48,6 +50,14 @@ export class App {
   private translate = inject(TranslateService);
 
   protected readonly title = signal('Monify');
+
+  items: MenuItem[] = [
+    { label: 'Components' },
+    { label: 'Form' },
+    { label: 'InputText', routerLink: '/inputtext' },
+  ];
+
+  home: MenuItem = { icon: 'pi pi-home', routerLink: '/' };
 
   public categories = this.dbManager.allCategories;
 
