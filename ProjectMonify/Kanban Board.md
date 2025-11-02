@@ -1,13 +1,13 @@
 ---
-
 kanban-plugin: board
-
 ---
 
 ## Backlog
 
 - [ ] [[Cose da rivedere o rivedere]]
 - [ ] [[[Medium] Homepage Dashboard Iniziale (Opzionale per Fase 1 ma consigliata)]]
+- [ ] Sprint 0 chiuso!
+- [ ] Readme con immagini
 
 
 ## Doing

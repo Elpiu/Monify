@@ -1,59 +1,83 @@
-# Monify
+# Monify  calendario offline
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
 
-## Development server
+**Monify** è un'applicazione web progressiva (PWA) progettata per offrire un sistema di gestione e visualizzazione di eventi e dati basati sul **calendario**. L'obiettivo primario è fornire agli utenti uno strumento semplice, rapido e **totalmente fruibile offline** per tracciare "umori" e note, con un'architettura pensata per essere estesa a qualsiasi tipo di dato temporale.
 
-To start a local development server, run:
+L'applicazione è costruita per essere veloce, affidabile e installabile su qualsiasi dispositivo, garantendo un'esperienza utente fluida e continua, anche senza connessione internet.
 
-```bash
-ng serve
-```
+![image](ProjectMonify/screenshot/home.png)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## ✨ Caratteristiche Principali
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Monify è ricco di funzionalità pensate per l'utente moderno:
 
-```bash
-ng generate component component-name
-```
+- **🗓️ Visualizzazione Calendario Mensile:** Un'interfaccia chiara e intuitiva per visualizzare gli umori e le note del mese a colpo d'occhio.
+- **✍️ Inserimento, Modifica ed Eliminazione:** Gestisci facilmente i tuoi dati giornalieri. Aggiungi un umore e una nota, modificali in qualsiasi momento o cancellali con un semplice clic.
+- **🌐 Esperienza Offline Completa:** Grazie a IndexedDB e Dexie.js, l'applicazione funziona perfettamente senza connessione a internet. Tutti i dati vengono salvati localmente nel browser.
+- **📲 Installazione PWA:** Monify può essere installata su dispositivi desktop e mobili per un accesso rapido e un'esperienza nativa. Un popup guida gli utenti mobili all'installazione se non l'hanno ancora fatto.
+- **💡 Suggerisci una Funzionalità:** La tua opinione conta! Un'apposita sezione permette agli utenti di suggerire nuove feature per migliorare l'applicazione.
+- **📤 Esportazione Dati (CSV):** Esporta tutti i tuoi dati in formato CSV per averne una copia di backup o per analizzarli con altri strumenti.
+- **🗑️ Cancellazione Completa dei Dati:** Vuoi ricominciare? Una funzione dedicata ti permette di eliminare tutti i dati salvati in modo sicuro e definitivo.
+- **🧱 Navbar Essenziale:** Una navigazione semplice e pulita per accedere a tutte le funzionalità principali senza distrazioni.
+- **ℹ️ Footer con Versione:** Tieni traccia della versione dell'applicazione che stai utilizzando direttamente dal footer.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🛠️ Stack Tecnologico
 
-```bash
-ng generate --help
-```
+L'applicazione è costruita utilizzando tecnologie moderne e performanti per garantire la migliore esperienza utente possibile.
 
-## Building
+| Componente | Tecnologia | Ruolo |
+| :--- | :--- | :--- |
+| **Framework Frontend** | **Angular 20** | Framework principale per un'applicazione robusta, modulare e manutenibile. |
+| **Componenti UI** | **PrimeNG 20** | Libreria di componenti UI per un'interfaccia ricca, accessibile e di alta qualità. |
+| **Styling** | **Tailwind CSS 3** | Framework CSS utility-first per uno stile rapido, reattivo e personalizzabile. |
+| **Database Locale** | **Dexie.js** | Wrapper per IndexedDB per una gestione dati offline potente, veloce e strutturata. |
 
-To build the project run:
+## 🚀 Strategia di Deploy
 
-```bash
-ng build
-```
+Il deploy del progetto viene effettuato tramite **GitHub Pages**, una scelta che semplifica il processo di distribuzione continua (CI/CD) e offre un hosting gratuito e affidabile.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## ⚙️ Installazione e Avvio Locale
 
-## Running unit tests
+Per eseguire il progetto in locale, segui questi semplici passaggi:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+1.  **Clona il repository:**
+    ```bash
+    git clone https://github.com/TUO_USERNAME/monify.git
+    ```
 
-```bash
-ng test
-```
+2.  **Entra nella directory del progetto:**
+    ```bash
+    cd monify
+    ```
 
-## Running end-to-end tests
+3.  **Installa le dipendenze:**
+    ```bash
+    npm install
+    ```
 
-For end-to-end (e2e) testing, run:
+4.  **Avvia il server di sviluppo:**
+    ```bash
+    npm start
+    ```
+    L'applicazione sarà disponibile all'indirizzo `http://localhost:4200/`.
 
-```bash
-ng e2e
-```
+## 🤝 Come Contribuire
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+I contributi sono sempre i benvenuti! Se vuoi migliorare Monify, sentiti libero di aprire una **Pull Request** o segnalare un problema tramite le **Issues** di GitHub.
 
-## Additional Resources
+## 📄 Licenza
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Questo progetto è rilasciato sotto la Licenza MIT. Vedi il file [LICENSE](LICENSE.md) per maggiori dettagli.
+
+---
+
+### Come utilizzare questo README:
+
+1.  **Copia e incolla** il testo qui sopra in un nuovo file chiamato `README.md` nella root del tuo progetto GitHub.
+2.  **Personalizza i link:**
+    *   Sostituisci `https://github.com/TUO_USERNAME/monify.git` con l'URL effettivo del tuo repository.
+    *   Assicurati di avere un file `LICENSE` nel tuo progetto, o rimuovi il link se preferisci non specificare una licenza.
+3.  **Aggiungi badge:** Ho incluso un badge per la licenza. Puoi aggiungerne altri (es. per lo stato della build, la versione di Angular, ecc.) da siti come [Shields.io](https://shields.io/).
+
+Questo README fornirà una panoramica completa e professionale del tuo progetto a chiunque visiti il tuo repository.
